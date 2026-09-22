@@ -1,7 +1,9 @@
 print("--------------------")
 print("Play TicTacToe!!!!")
 print("--------------------")
-
+print()
+print("Positions:- ")
+print()
 print("  1  |  2  |  3  ")
 print("-----+-----+-----")
 print("  4  |  5  |  6  ")
@@ -14,6 +16,7 @@ tic=[" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 
 while True:
+    print()
     if not " " in tic:
         print("Tie")
         break
@@ -92,7 +95,9 @@ while True:
                     print(f"  {tic[3]}  |  {tic[4]}  |  {tic[5]}  ")
                     print("-----+-----+-----")
                     print(f"  {tic[6]}  |  {tic[7]}  |  {tic[8]}  ")
-    if inp=="o":
+        else:
+                print("Not valide position")
+    elif inp=="o":
             place=int(input("Choose a Position number: "))
             if place==1:
                 tic.pop(0)
@@ -166,6 +171,10 @@ while True:
                         print(f"  {tic[3]}  |  {tic[4]}  |  {tic[5]}  ")
                         print("-----+-----+-----")
                         print(f"  {tic[6]}  |  {tic[7]}  |  {tic[8]}  ")
+            else:
+                    print("Not a valide position")
+    else:
+            print(f"{inp} Not a Valid Move")
     print("---------------------------------------------------------")
     if tic[0]==tic[1]==tic[2]=="X":
             print("X won")
@@ -231,5 +240,6 @@ while True:
             break
     else:
         pass
+    print()
 
 print("Game Over")
