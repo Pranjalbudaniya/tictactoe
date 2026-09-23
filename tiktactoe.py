@@ -13,6 +13,7 @@ print()
 
 
 tic=[" ", " ", " ", " ", " ", " ", " ", " ", " "]
+turn="x"
 
 def result():
         print(f"  {tic[0]}  |  {tic[1]}  |  {tic[2]}  ")
@@ -26,88 +27,170 @@ while True:
         print("Tie")
         break
     inp=str(input("X or O: ")).lower()
-    if inp=="x":
-        place=int(input("Choose a Position number: "))
+    if inp!="x" and inp!="o":
+        print(f"{inp} Not a Valid Move")
+    elif inp!=turn:
+        print(f"It's {turn.upper()}'s turn")
+    elif inp=="x":
+        try:
+            place=int(input("Choose a Position number: "))
+        except ValueError:
+            print("Not a valide position")
+            continue
         if place==1:
-            tic.pop(0)
-            tic.insert(0,"X")
-            result()
+            if tic[0]==" ":
+                tic.pop(0)
+                tic.insert(0,"X")
+                result()
+                turn="o"
+            else:
+                print("That position is already taken")
         elif place==2:
-                    tic.pop(1)
-                    tic.insert(1,"X")
-                    result()
+            if tic[1]==" ":
+                tic.pop(1)
+                tic.insert(1,"X")
+                result()
+                turn="o"
+            else:
+                print("That position is already taken")
         elif place==3:
+            if tic[2]==" ":
                 tic.pop(2)
                 tic.insert(2,"X")
                 result()
+                turn="o"
+            else:
+                print("That position is already taken")
         elif place==4:
-                    tic.pop(3)
-                    tic.insert(3,"X")
-                    result()
+            if tic[3]==" ":
+                tic.pop(3)
+                tic.insert(3,"X")
+                result()
+                turn="o"
+            else:
+                print("That position is already taken")
         elif place==5:
-                    tic.pop(4)
-                    tic.insert(4,"X")
-                    result()
+            if tic[4]==" ":
+                tic.pop(4)
+                tic.insert(4,"X")
+                result()
+                turn="o"
+            else:
+                print("That position is already taken")
         elif place==6:
-                    tic.pop(5)
-                    tic.insert(5,"X")
-                    result()
+            if tic[5]==" ":
+                tic.pop(5)
+                tic.insert(5,"X")
+                result()
+                turn="o"
+            else:
+                print("That position is already taken")
         elif place==7:
-                    tic.pop(6)
-                    tic.insert(6,"X")
-                    result()
+            if tic[6]==" ":
+                tic.pop(6)
+                tic.insert(6,"X")
+                result()
+                turn="o"
+            else:
+                print("That position is already taken")
         elif place==8:
-                    tic.pop(7)
-                    tic.insert(7,"X")
-                    result()
+            if tic[7]==" ":
+                tic.pop(7)
+                tic.insert(7,"X")
+                result()
+                turn="o"
+            else:
+                print("That position is already taken")
         elif place==9:
-                    tic.pop(8)
-                    tic.insert(8,"X")
-                    result()
+            if tic[8]==" ":
+                tic.pop(8)
+                tic.insert(8,"X")
+                result()
+                turn="o"
+            else:
+                print("That position is already taken")
         else:
-                print("Not valide position")
+            print("Not valide position")
     elif inp=="o":
+        try:
             place=int(input("Choose a Position number: "))
-            if place==1:
+        except ValueError:
+            print("Not a valide position")
+            continue
+        if place==1:
+            if tic[0]==" ":
                 tic.pop(0)
                 tic.insert(0,"O")
                 result()
-            elif place==2:
-                        tic.pop(1)
-                        tic.insert(1,"O")
-                        result()
-            elif place==3:
-                    tic.pop(2)
-                    tic.insert(2,"O")
-                    result()
-            elif place==4:
-                        tic.pop(3)
-                        tic.insert(3,"O")
-                        result()
-            elif place==5:
-                        tic.pop(4)
-                        tic.insert(4,"O")
-                        result()
-            elif place==6:
-                        tic.pop(5)
-                        tic.insert(5,"O")
-                        result()
-            elif place==7:
-                        tic.pop(6)
-                        tic.insert(6,"O")
-                        result()
-            elif place==8:
-                        tic.pop(7)
-                        tic.insert(7,"O")
-                        result()
-            elif place==9:
-                        tic.pop(8)
-                        tic.insert(8,"O")
-                        result()
+                turn="x"
             else:
-                    print("Not a valide position")
-    else:
-            print(f"{inp} Not a Valid Move")
+                print("That position is already taken")
+        elif place==2:
+            if tic[1]==" ":
+                tic.pop(1)
+                tic.insert(1,"O")
+                result()
+                turn="x"
+            else:
+                print("That position is already taken")
+        elif place==3:
+            if tic[2]==" ":
+                tic.pop(2)
+                tic.insert(2,"O")
+                result()
+                turn="x"
+            else:
+                print("That position is already taken")
+        elif place==4:
+            if tic[3]==" ":
+                tic.pop(3)
+                tic.insert(3,"O")
+                result()
+                turn="x"
+            else:
+                print("That position is already taken")
+        elif place==5:
+            if tic[4]==" ":
+                tic.pop(4)
+                tic.insert(4,"O")
+                result()
+                turn="x"
+            else:
+                print("That position is already taken")
+        elif place==6:
+            if tic[5]==" ":
+                tic.pop(5)
+                tic.insert(5,"O")
+                result()
+                turn="x"
+            else:
+                print("That position is already taken")
+        elif place==7:
+            if tic[6]==" ":
+                tic.pop(6)
+                tic.insert(6,"O")
+                result()
+                turn="x"
+            else:
+                print("That position is already taken")
+        elif place==8:
+            if tic[7]==" ":
+                tic.pop(7)
+                tic.insert(7,"O")
+                result()
+                turn="x"
+            else:
+                print("That position is already taken")
+        elif place==9:
+            if tic[8]==" ":
+                tic.pop(8)
+                tic.insert(8,"O")
+                result()
+                turn="x"
+            else:
+                print("That position is already taken")
+        else:
+            print("Not a valide position")
     print("---------------------------------------------------------")
     if tic[0]==tic[1]==tic[2]=="X":
             print("X won")
