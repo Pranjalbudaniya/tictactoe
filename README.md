@@ -2,9 +2,20 @@
 
 A two-player Tic Tac Toe game that runs in the terminal.
 
-## How to play
+## How to Run
 
-1. The board positions (1-9) are shown at the start of the game.
-2. On each turn, enter `x` or `o` for the mark, then enter a position number (1-9) to place it.
-3. The board prints after every move.
-4. The game ends when three matching marks line up (row, column, or diagonal), or when the board fills up with no winner (tie).
+## How to Play
+
+1. Positions on the board are numbered 1-9 as shown below:
+
+```
+  1  |  2  |  3
+-----+-----+-----
+  4  |  5  |  6
+-----+-----+-----
+  7  |  8  |  9
+```
+
+2. Players alternate turns, starting with X.
+3. On your turn, enter your symbol (`x` or `o`) when prompted, then the position number (1-9) you want to place it on.
+4. The game ends when a player gets three in a row (horizontally, vertically, or diagonally), or when the board is full (tie).
